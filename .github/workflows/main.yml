@@ -1,4 +1,4 @@
- name: static website hosting
+ name: hostings3
 
  on:
    push:
@@ -20,4 +20,4 @@
          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
      - name: copying the code to S3 bucket
-       run: aws s3 sync . s3://demos3githubactionscm --delete
+       run: aws s3 sync . s3://$S3BUCKET --delete
